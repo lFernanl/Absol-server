@@ -4,13 +4,13 @@ let fs = require('fs');
 let path = require('path');
 
 let shop = [
-	['Symbol', 'Buys a custom symbol to go infront of name and puts you at top of userlist. (Temporary until restart, certain symbols are blocked)', 5],
-	['Fix', 'Buys the ability to alter your current custom avatar or trainer card. (don\'t buy if you have neither)', 10],
-	['Avatar', 'Buys an custom avatar to be applied to your name (You supply. Images larger than 80x80 may not show correctly)', 20],
-	['League Room', 'Purchases a room at a reduced rate for use with a league.  A roster must be supplied with at least 10 members for this room.', 25],
-	['Trainer', 'Buys a trainer card which shows information through a command. (You supply, can be refused)', 40],
-	['Staff Help', 'Staff member will help set up roomintros and anything else needed in a room. Response may not be immediate.', 50],
-	['Room', 'Buys a chatroom for you to own. (within reason, can be refused)', 100]
+	['Symbol', 'Compra el derecho a obtener un symbol. Este se borrara despues de un reinicio', 5],
+	['Fix', 'Compra la posibibilidad de tener un arreglo en tu tc,avatar,sala,etc (no comprar si no posee ningun articulo)', 10],
+	['Avatar', 'Compra un avatar personalizado el cual debe ser de 80x80', 20],
+	['Room', 'Compra una sala (Sera publica o privada segun para que la usaras).', 25],
+	['Trainer Card', 'Compra una Tarjeta de Entrenador, la cual tendras que armar con html', 40],
+	['Voiced', 'Compra el rango de Vocero en el Servidor (Se te quitara si haces mal uso de este).', 100],
+	['Bot Phrase', 'Compra una frase personalizada para el Lobby', 60]
 ];
 
 let shopDisplay = getShopDisplay(shop);
@@ -27,7 +27,7 @@ let shopDisplay = getShopDisplay(shop);
  * @returns {String}
  */
 function currencyName(amount) {
-	let name = " buck";
+	let name = " Pd";
 	return amount === 1 ? name : name + "s";
 }
 
