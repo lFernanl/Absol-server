@@ -732,9 +732,9 @@ class Tournament {
 		//
 
 		let color = '#088cc7';
-		let sizeRequiredToEarn = 4;
+		let sizeRequiredToEarn = 2;
 		let currencyName = function (amount) {
-			let name = " buck";
+			let name = " Pd";
 			return amount === 1 ? name : name + "s";
 		};
 		let data = this.generator.getResults().map(usersToNames).toString();
@@ -753,7 +753,7 @@ class Tournament {
 		let tourSize = this.generator.users.size;
 
 		if (this.room.isOfficial && tourSize >= sizeRequiredToEarn) {
-			let firstMoney = Math.round(tourSize / 4);
+			let firstMoney = Math.round(tourSize * 2);
 			let secondMoney = Math.round(firstMoney / 2);
 
 			Db('money').set(wid, Db('money').get(wid, 0) + firstMoney);
