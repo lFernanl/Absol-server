@@ -250,63 +250,58 @@ exports.replsocketmode = 0o600;
 //     - tournamentsmoderation: /tour dq, autodq, end etc.
 //     - tournamentsmanagement: enable/disable tournaments.
 exports.grouplist = [
-	{
+{
 		symbol: '~',
 		id: "admin",
-		name: "Administrator",
+		name: "Administrador",
 		root: true,
-		globalonly: true
+		globalonly: true,
 	},
 	{
 		symbol: '&',
 		id: "leader",
-		name: "Leader",
+		name: "Líder",
 		inherit: '@',
 		jurisdiction: '@u',
 		promote: 'u',
-		roomowner: true,
-		roommod: true,
-		roomdriver: true,
 		forcewin: true,
 		declare: true,
 		modchatall: true,
 		rangeban: true,
-		makeroom: true,
-		editroom: true,
 		potd: true,
 		disableladder: true,
 		globalonly: true,
-		tournamentsmanagement: true
+		tournamentsmanagement: true,
+
 	},
 	{
 		symbol: '#',
 		id: "owner",
-		name: "Room Owner",
+		name: "Jefe de Sala",
 		inherit: '@',
 		jurisdiction: 'u',
 		roommod: true,
 		roomdriver: true,
-		editroom: true,
 		declare: true,
 		modchatall: true,
 		roomonly: true,
-		tournamentsmanagement: true
+		tournamentsmanagement: true,
 	},
 	{
 		symbol: '\u2605',
 		id: "player",
-		name: "Player",
+		name: "Jugador",
 		inherit: '+',
 		roomvoice: true,
 		modchat: true,
 		roomonly: true,
 		editroom: true,
-		joinbattle: true
+		joinbattle: true,
 	},
 	{
 		symbol: '@',
 		id: "mod",
-		name: "Moderator",
+		name: "Moderador",
 		inherit: '%',
 		jurisdiction: 'u',
 		ban: true,
@@ -315,18 +310,18 @@ exports.grouplist = [
 		forcerename: true,
 		ip: true,
 		alts: '@u',
-		tournaments: true
+		tournaments: true,
 	},
 	{
 		symbol: '%',
 		id: "driver",
-		name: "Driver",
-		inherit: '+',
+		name: "Conductor",
+		inherit: '\u2295',
 		jurisdiction: 'u',
 		announce: true,
-		warn: '\u2605u',
+		warn: true,
 		kick: true,
-		mute: '\u2605u',
+		mute: true,
 		lock: true,
 		forcerename: true,
 		timer: true,
@@ -336,18 +331,46 @@ exports.grouplist = [
 		receiveauthmessages: true,
 		tournamentsmoderation: true,
 		jeopardy: true,
-		joinbattle: true
+		joinbattle: true,
+	},
+	{
+		symbol: '\u00A5',
+		id: "youtuber",
+		name: "Youtuber",
+		inherit: '\u2295',
+		jurisdiction: 'u',
+		youtube: true,
+		warn: true,
+		kick: true
+	},
+	{
+		symbol: '\u2295',
+		id: "operator",
+		name: "Operador",
+		inherit: '+',
+		tournamentsmoderation: true,
+		tournaments: true
 	},
 	{
 		symbol: '+',
 		id: "voice",
-		name: "Voice",
+		name: "Vocero",
+		inherit: '$',
+		joinbattle: true,
+		broadcast: true,
+		tournamentsmoderation: true,
+		tournaments: true
+	},
+	{
+		symbol: '$',
+		id: "destacado",
+		name: "Destacado",
 		inherit: ' ',
 		alts: 's',
-		broadcast: true
+		broadcast: true,
 	},
 	{
 		symbol: ' ',
-		ip: 's'
-	}
+		ip: 's',
+	},
 ];
