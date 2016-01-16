@@ -4,13 +4,15 @@ let fs = require('fs');
 let path = require('path');
 
 let shop = [
-	['Symbol', 'Compra el derecho a obtener un symbol. Este se borrara despues de un reinicio', 5],
-	['Fix', 'Compra la posibibilidad de tener un arreglo en tu tc,avatar,sala,etc (no comprar si no posee ningun articulo)', 10],
-	['Avatar', 'Compra un avatar personalizado el cual debe ser de 80x80', 20],
-	['Room', 'Compra una sala (Sera publica o privada segun para que la usaras).', 25],
-	['Trainer Card', 'Compra una Tarjeta de Entrenador, la cual tendras que armar con html', 40],
-	['Voiced', 'Compra el rango de Vocero en el Servidor (Se te quitara si haces mal uso de este).', 100],
-	['Bot Phrase', 'Compra una frase personalizada para el Lobby', 60]
+	['Symbol', 'Compra el derecho a obtener un symbol. Este se borrara despues de un reinicio', 45],
+	['Fix', 'Compra la posibibilidad de tener un arreglo en tu tc,avatar,sala,etc (no comprar si no posee ningun articulo)', 50],
+	['Avatar', 'Compra un avatar personalizado el cual debe ser de 80x80', 90],
+	['Room', 'Compra una sala (Sera publica o privada segun para que la usaras).', 125],
+	['Trainer Card', 'Compra una Tarjeta de Entrenador, la cual tendras que armar con html', 100],
+	['Voiced', 'Compra el rango de Vocero en el Servidor (Se te quitara si haces mal uso de este).', 200],
+	['Bot Phrase', 'Compra una frase personalizada para el Lobby', 70],
+	['Pokemon en nick','Compra un pokemon que saldra en tu nick', 200],
+	['Declare global',' Opción a declarar algo globalmente', 30],
 ];
 
 let shopDisplay = getShopDisplay(shop);
