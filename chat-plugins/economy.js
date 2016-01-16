@@ -131,8 +131,7 @@ function handleBoughtItem(item, user, cost) {
 }
 
 exports.commands = {
-	atm: 'wallet',
-	purse: 'wallet',
+	pd: 'wallet',
 	wallet: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (!target) target = user.name;
