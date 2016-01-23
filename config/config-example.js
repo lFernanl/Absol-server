@@ -168,6 +168,9 @@ exports.tellsexpiryage = 1000 * 60 * 60 * 24 * 7;
 // to send offline messages.
 exports.tellrank = '+';
 
+// database use to store user's money, tickets, etc.
+exports.database = 'lowdb';
+
 // Custom avatars.
 // This allows you to specify custom avatar images for users on your server.
 // Place custom avatar files under the /config/avatars/ directory.

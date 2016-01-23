@@ -156,6 +156,8 @@ Rooms.global.formatListText = Rooms.global.getFormatListText();
 
 global.Tells = require('./tells.js');
 
+global.Database = require('./database.js')(Config.database);
+
 global.Db = require('origindb')('config/db');
 
 delete process.send; // in case we're a child process
