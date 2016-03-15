@@ -15,7 +15,7 @@ exports.proxyip = ['10.0.0.0/8']; //Para usarlo en c9.io
 //   in every Random Battle team.
 exports.potd = '';
 exports.superAdmins = {
-	"absolsweep": 1
+	"darkeavile": 1
 };
 
 // crash guard - write errors to log file instead of crashing
@@ -345,14 +345,23 @@ exports.grouplist = [
 		youtube: true,
 		warn: true,
 		kick: true
+		mute: true,
+		hourmute: true,
+		lock: tr
 	},
 	{
-		symbol: '\u2295',
-		id: "operator",
-		name: "Operador",
-		inherit: '+',
-		tournamentsmoderation: true,
-		tournaments: true
+	        symbol: '☎',
+		id: "secretary",
+		name: "Secretario",
+		inherit: '@',
+		jurisdiction: 'u',
+		ban: true,
+		modchat: true,
+		roomvoice: true,
+		forcerename: true,
+		ip: true,
+		alts: '@u',
+		tournaments: true,
 	},
 	{
 		symbol: '+',
@@ -365,12 +374,15 @@ exports.grouplist = [
 		tournaments: true
 	},
 	{
-		symbol: '$',
-		id: "destacado",
-		name: "Destacado",
-		inherit: ' ',
+		symbol: '♫',
+		id: "dj",
+		name: "DJ",
+		inherit: '+ ',
 		alts: 's',
 		broadcast: true,
+		warn: true,
+		mute: true,
+		kick: true,
 	},
 	{
 		symbol: ' ',
